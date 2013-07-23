@@ -12,7 +12,8 @@ Url:		https://wiki.gnome.org/KioGioBridge
 Source0:	%{name}-%{svn}.tar.bz2
 # Qt and GTK have symbol conflicts
 Patch0:		kio-giobridge-1349920-qtgtk.patch
-BuildRequires:	kde4-macros
+BuildRequires:	cmake
+BuildRequires:	kdelibs4-devel
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(gio-2.0)
 

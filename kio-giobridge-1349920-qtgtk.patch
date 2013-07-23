@@ -1,0 +1,46 @@
+diff -urN kio-giobridge-1349920/giobridge/giobridge-errormapper.h kio-giobridge-1349920-patched/giobridge/giobridge-errormapper.h
+--- kio-giobridge-1349920/giobridge/giobridge-errormapper.h	2013-07-23 17:19:05.042631926 +1100
++++ kio-giobridge-1349920-patched/giobridge/giobridge-errormapper.h	2013-07-23 17:18:15.857796428 +1100
+@@ -23,6 +23,8 @@
+ 
+ #include <kurl.h>
+ #include <kio/ioslave_defaults.h>
++
++#undef signals
+ #include <glib.h>
+ #include <gio/gio.h>
+ 
+diff -urN kio-giobridge-1349920/giobridge/giobridge.h kio-giobridge-1349920-patched/giobridge/giobridge.h
+--- kio-giobridge-1349920/giobridge/giobridge.h	2013-07-23 17:19:04.811628008 +1100
++++ kio-giobridge-1349920-patched/giobridge/giobridge.h	2013-07-23 17:18:15.856796414 +1100
+@@ -34,6 +34,7 @@
+ #include <stdio.h>
+ #include <unistd.h>
+ 
++#undef signals
+ #include <glib.h>
+ #include <gio/gio.h>
+ 
+diff -urN kio-giobridge-1349920/kdedmodule/giobridge-remotedirnotify.cpp kio-giobridge-1349920-patched/kdedmodule/giobridge-remotedirnotify.cpp
+--- kio-giobridge-1349920/kdedmodule/giobridge-remotedirnotify.cpp	2013-07-23 17:19:05.070632401 +1100
++++ kio-giobridge-1349920-patched/kdedmodule/giobridge-remotedirnotify.cpp	2013-07-23 17:18:15.859796462 +1100
+@@ -30,6 +30,7 @@
+ #include <QtDBus/QtDBus>
+ #include <QDir>
+ 
++#undef signals
+ #include <glib.h>
+ #include <gio/gio.h>
+ 
+diff -urN kio-giobridge-1349920/kdedmodule/giobridge-remotedirnotify.h kio-giobridge-1349920-patched/kdedmodule/giobridge-remotedirnotify.h
+--- kio-giobridge-1349920/kdedmodule/giobridge-remotedirnotify.h	2013-07-23 17:19:05.068632367 +1100
++++ kio-giobridge-1349920-patched/kdedmodule/giobridge-remotedirnotify.h	2013-07-23 17:18:15.859796462 +1100
+@@ -23,6 +23,8 @@
+ 
+ #include <kurl.h>
+ #include <QtCore/QObject>
++
++#undef signals
+ #include <glib.h>
+ #include <gio/gio.h>
+ 

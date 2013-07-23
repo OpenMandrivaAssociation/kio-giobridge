@@ -1,0 +1,12 @@
+diff -urN kio-giobridge-1349920/giobridge/giobridge.cpp kio-giobridge-1349920-patched/giobridge/giobridge.cpp
+--- kio-giobridge-1349920/giobridge/giobridge.cpp	2013-07-23 17:19:05.000000000 +1100
++++ kio-giobridge-1349920-patched/giobridge/giobridge.cpp	2013-07-24 02:37:13.175030988 +1100
+@@ -152,7 +152,7 @@
+ 
+     if (displayName != NULL)
+     {
+-        entry.insert( KIO::UDSEntry::UDS_DISPLAY_NAME, QString(displayName));
++        entry.insert( KIO::UDSEntry::UDS_DISPLAY_NAME, QFile::decodeName(displayName));
+     }
+ 
+     // access permissions

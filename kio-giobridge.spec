@@ -3,7 +3,7 @@
 Name:		kio-giobridge
 Summary:	KIO-Giobridge is an optional adapter for KIO to use GIO/GVFS
 Version:	0
-Release:	0.%{svn}.1
+Release:	0.%{svn}.2
 Group:		Graphical desktop/KDE
 # Unknown but let it be the same as for KDE libs
 License:	GPLv2+
@@ -12,6 +12,7 @@ Url:		https://wiki.gnome.org/KioGioBridge
 Source0:	%{name}-%{svn}.tar.bz2
 # Qt and GTK have symbol conflicts
 Patch0:		kio-giobridge-1349920-qtgtk.patch
+Patch1:		kio-giobridge-1349920-encoding.patch
 BuildRequires:	cmake
 BuildRequires:	kdelibs4-devel
 BuildRequires:	pkgconfig(glib-2.0)
@@ -55,6 +56,7 @@ KIO-Giobridge can be enabled/disabled with the kio-giobridge-mgr utility.
 %prep
 %setup -q -n %{name}-%{svn}
 %patch0 -p1
+%patch1 -p1
 
 %build
 %cmake_kde4
